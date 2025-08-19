@@ -1,6 +1,5 @@
 import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
-
 import CartContext from '../../context/CartContext'
 
 import './index.css'

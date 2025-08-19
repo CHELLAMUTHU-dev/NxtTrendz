@@ -14,10 +14,15 @@ import './App.css'
 
 class App extends Component {
   state = {
-    cartList: [],
+    cartList: JSON.parse(localStorage.getItem('cartList')) || [],
   }
 
-  //   TODO: Add your code for remove all cart items, increment cart item quantity, decrement cart item quantity, remove cart item
+  componentDidUpdate(prevProps, prevState) {
+    const {cartList} = this.state
+    if (prevState.cartList !== cartList) {
+      localStorage.setItem('cartList', JSON.stringify(cartList))
+    }
+  }
 
   addCartItem = product => {
     const {cartList} = this.state

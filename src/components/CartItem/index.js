@@ -1,4 +1,3 @@
-import {BsPlusSquare, BsDashSquare} from 'react-icons/bs'
 import {AiFillCloseCircle} from 'react-icons/ai'
 
 import CartContext from '../../context/CartContext'
@@ -40,32 +39,24 @@ const CartItem = props => (
             <div className="cart-quantity-container">
               <button
                 type="button"
-                className="quantity-controller-button"
+                className="quantity-controller-button minus"
                 onClick={onClickDecrement}
                 data-testid="minus"
               >
-                <BsDashSquare color="#52606D" size={12} />
+                -{' '}
               </button>
               <p className="cart-quantity">{quantity}</p>
               <button
                 type="button"
-                className="quantity-controller-button"
+                className="quantity-controller-button plus"
                 onClick={onClickIncrement}
                 data-testid="plus"
               >
-                <BsPlusSquare color="#52606D" size={12} />
+                +{' '}
               </button>
             </div>
             <div className="total-price-remove-container">
               <p className="cart-total-price">Rs {totalPrice}/-</p>
-              <button
-                className="remove-button"
-                type="button"
-                data-testid="remove"
-                onClick={onRemoveCartItem}
-              >
-                Remove
-              </button>
             </div>
           </div>
           <button

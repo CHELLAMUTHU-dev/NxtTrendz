@@ -33,8 +33,17 @@
 
 @media screen and (min-width: 768px) {
   .cart-heading {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
 /* Write your CSS here */
+.remove-all-btn {
+  background-color: rgb(33, 116, 239);
+  color: white;
+  align-self: flex-end;
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
