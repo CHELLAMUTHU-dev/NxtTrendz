@@ -2,10 +2,9 @@
   "name": "nxt-trendz-cart-features",
   "private": true,
   "version": "1.0.0",
-  "packageManager": "pnpm@8.15.6",
   "engines": {
-    "node": "18.x",
-    "pnpm": "8.15.6"
+    "node": "^10.13 || 12 || 14 || 15",
+    "npm": ">=6"
   },
   "dependencies": {
     "@testing-library/jest-dom": "5.11.9",
@@ -39,8 +38,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix src/",
     "format": "prettier --write \"./src\"",
-    "run-all": "npm-run-all --parallel test lint:fix",
-    "postinstall": "react-scripts build || echo \"Build failed but continuing\""
+    "run-all": "npm-run-all --parallel test lint:fix"
   },
   "lint-staged": {
     "*.js": [
